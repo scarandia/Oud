@@ -6,7 +6,6 @@ import ProductCard from "../components/ProductCard";
 import { PRODUCTS } from "../data/PERFUMES";
 import type { Product } from "../types/Product";
 import { WhatsAppButton } from "../components/WhatsAppButton";
-import { Contact } from "lucide-react";
 import ContactSection from "../components/ContactSection";
 
 const Home: React.FC = () => {
