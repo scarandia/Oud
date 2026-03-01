@@ -1,4 +1,4 @@
-type ProductType = "designer" | "arabic"| "nicho"
+export type ProductType = "designer" | "arabic"| "nicho"
 
 type Category =
   | "fresh"

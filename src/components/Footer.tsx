@@ -1,12 +1,12 @@
 import { Instagram, Facebook, Music2 } from "lucide-react";
 
 const Footer: React.FC = () => {
-  const phoneNumber = "+591 60346213";
+  const phoneNumber = "59160346213";
 
   return (
     <footer>
       {/* DIVIDER */}
-        <div className="w-full h-[1px] bg-neutral-200 mb-8"></div>
+      <div className="w-full h-[1px] bg-neutral-200 mb-8"></div>
       <div className="max-w-7xl mx-auto px-6 py-10">
         {/* TOP SECTION */}
         <div className="grid md:grid-cols-3 gap-12 mb-16">
@@ -97,8 +97,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
-        
       </div>
     </footer>
   );

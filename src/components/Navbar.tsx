@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
 import logo from "/images_logo/logo1.png";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +18,20 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const location = useLocation();
-  const isCannonPage = location.pathname === "/cannon";
-  const cannonLinkPath = isCannonPage ? "/" : "/cannon";
-  const cannonLinkLabel = isCannonPage ? "PERFUMES" : "CANNON";
+  const scrollToSection = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 200);
+    } else {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    setIsOpen(false);
+  };
 
   return (
     <header
@@ -29,59 +42,51 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div
-        className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ${
+        className={`relative w-full px-6 md:px-12 flex items-center ${
           isScrolled ? "h-16" : "h-20 md:h-24"
         }`}
       >
         {/* LOGO */}
-        <Link to="/" className="flex items-center">
+        <button
+          onClick={() => scrollToSection("top")}
+          className="absolute left-6 md:left-12"
+        >
           <img
             src={logo}
             alt="Maison Oud"
-            className={`w-auto object-contain transition-all duration-500 ease-out hover:opacity-80 ${
-              isScrolled ? "h-10 opacity-90" : "h-14 md:h-16 scale-105"
+            className={`transition-all duration-500 ${
+              isScrolled ? "h-10" : "h-14 md:h-16"
             }`}
           />
-        </Link>
+        </button>
 
-        {/* DESKTOP MENU */}
-        <nav className="hidden md:flex items-center space-x-10 text-sm tracking-[0.2em]">
-          <Link to="/" className="hover:text-neutral-500 transition-colors">
+        {/* MENÚ CENTRADO */}
+        <nav className="hidden md:flex mx-auto items-center space-x-12 text-sm tracking-[0.2em]">
+          <button
+            onClick={() => scrollToSection("top")}
+            className="hover:text-neutral-500 transition"
+          >
             INICIO
-          </Link>
+          </button>
 
-          <Link
-            to="/coleccion"
-            className="hover:text-neutral-500 transition-colors"
+          <button
+            onClick={() => scrollToSection("catalogo")}
+            className="hover:text-neutral-500 transition"
           >
-            COLECCIÓN
-          </Link>
+            CATÁLOGO
+          </button>
 
-          <Link
-            to={cannonLinkPath}
-            className="transition-colors hover:text-neutral-500"
-          >
-            {cannonLinkLabel}
-          </Link>
-
-          <Link
-            to="/marcas"
-            className="hover:text-neutral-500 transition-colors"
-          >
-            MARCAS
-          </Link>
-
-          <Link
-            to="/contacto"
-            className="hover:text-neutral-500 transition-colors"
+          <button
+            onClick={() => scrollToSection("contacto")}
+            className="hover:text-neutral-500 transition"
           >
             CONTACTO
-          </Link>
+          </button>
         </nav>
 
         {/* MOBILE BUTTON */}
         <button
-          className="md:hidden flex flex-col justify-center items-center space-y-1"
+          className="md:hidden absolute right-6 flex flex-col space-y-1"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span className="w-6 h-[1px] bg-black"></span>
@@ -93,29 +98,21 @@ const Navbar: React.FC = () => {
       {/* MOBILE MENU */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ${
-          isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="px-6 pb-8 pt-4 flex flex-col space-y-6 text-sm tracking-[0.2em] bg-white border-t border-neutral-200">
-          <Link to="/" onClick={() => setIsOpen(false)}>
+          <button onClick={() => scrollToSection("top")}>
             INICIO
-          </Link>
+          </button>
 
-          <Link to="/coleccion" onClick={() => setIsOpen(false)}>
-            COLECCIÓN
-          </Link>
+          <button onClick={() => scrollToSection("catalogo")}>
+            CATÁLOGO
+          </button>
 
-          <Link to={cannonLinkPath} onClick={() => setIsOpen(false)}>
-            {cannonLinkLabel}
-          </Link>
-
-          <Link to="/marcas" onClick={() => setIsOpen(false)}>
-            MARCAS
-          </Link>
-
-          <Link to="/contacto" onClick={() => setIsOpen(false)}>
+          <button onClick={() => scrollToSection("contacto")}>
             CONTACTO
-          </Link>
+          </button>
         </div>
       </div>
     </header>

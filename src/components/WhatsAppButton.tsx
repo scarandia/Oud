@@ -1,22 +1,33 @@
 import React from "react";
-import { PRODUCTS } from "../data/PERFUMES";
-export const WhatsAppButton = () => {
-    const [selectedSize, setSelectedSize] = React.useState("");
+import { MessageCircle } from "lucide-react";
 
-    const handleWhatsAppOrder = () => {
-    const message = `Hola! Me interesa comprar:\n\n*${PRODUCTS.name}*\nMarca: ${product.brand}\nTamaño: ${selectedSize}\nPrecio: Bs. ${product.price}\n\n¿Está disponible?`;
+export const WhatsAppButton: React.FC = () => {
+  const handleClick = () => {
+    const message = `Hola, estoy interesado en sus perfumes y me gustaría recibir asesoría. ¿Podrían ayudarme?`;
     const phoneNumber = "59160346213";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
     window.open(url, "_blank");
   };
+
   return (
-    <>
+    <div className="hidden md:block fixed right-8 bottom-8 z-50">
       <button
-        onClick={handleWhatsAppOrder}
-        className="w-full bg-neutral-900 text-white py-5 text-lg tracking-widest uppercase hover:bg-neutral-700 transition-colors"
+        onClick={handleClick}
+        className="
+          group flex items-center justify-center
+          w-12 h-12 rounded-full
+          bg-white/70 backdrop-blur-md
+          border border-neutral-300
+          text-neutral-600
+          hover:text-black hover:border-black
+          transition-all duration-300
+          shadow-sm hover:shadow-md
+        "
+        aria-label="Contactar por WhatsApp"
       >
-        Ordenar por WhatsApp
+        <MessageCircle size={50} strokeWidth={1.5} />
       </button>
-    </>
+    </div>
   );
 };

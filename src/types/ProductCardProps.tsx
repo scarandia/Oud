@@ -1,6 +1,6 @@
-import type { Product } from './Product';
+import type { Product } from "./Product";
 
 export interface ProductCardProps {
   product: Product;
-  onClick: (product: Product) => void;
+  onClick?: (product: Product) => void;
 }

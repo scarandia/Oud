@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/* import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Search, X } from 'lucide-react';
 
 // ============================================================================
@@ -538,4 +538,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; */

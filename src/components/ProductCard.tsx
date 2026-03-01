@@ -2,14 +2,20 @@ import React from "react";
 import type { ProductCardProps } from "../types/ProductCardProps";
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick(product);
+    }
+  };
+
   return (
     <div
-      onClick={() => onClick(product)}
+      onClick={handleClick}
       className="group cursor-pointer bg-white"
       role="button"
       tabIndex={0}
       onKeyDown={(e: React.KeyboardEvent) => {
-        if (e.key === "Enter" || e.key === " ") {
+        if ((e.key === "Enter" || e.key === " ") && onClick) {
           onClick(product);
         }
       }}
@@ -29,9 +35,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
         <p className="text-sm text-neutral-500 tracking-widest uppercase mb-2">
           {product.brand}
         </p>
+
         <h3 className="text-2xl font-serif text-neutral-900 mb-3 group-hover:text-neutral-600 transition-colors">
           {product.name}
         </h3>
+
         <p className="text-xl text-neutral-900 font-light">
           Bs. {product.sizes[0].prices[0]}
         </p>

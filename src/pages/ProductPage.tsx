@@ -23,7 +23,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product, onClose }) => {
       selectedSize.prices[0]
     }\n\n¿Está disponible?`;
 
-    const phoneNumber = "+591 60346213";
+    const phoneNumber = "59160346213";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message,
     )}`;
