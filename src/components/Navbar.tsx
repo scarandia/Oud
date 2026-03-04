@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "/images_logo/logo1.png";
+import logo_white from "/images_logo/logo_white.png";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
@@ -9,9 +10,11 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const isCannonPage = location.pathname === "/cannon";
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 40);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,80 +22,129 @@ const Navbar: React.FC = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    if (location.pathname !== "/") {
-      navigate("/");
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: "smooth" });
-      }, 200);
-    } else {
-      const element = document.getElementById(id);
-      element?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
 
     setIsOpen(false);
   };
 
+  const handleInicio = () => {
+    if (isCannonPage) {
+      scrollToSection("cannonHero");
+    } else {
+      scrollToSection("heroPerfumes");
+    }
+  };
+
+  const handleCatalogo = () => {
+    if (isCannonPage) {
+      scrollToSection("cannonProducts");
+    } else {
+      scrollToSection("catalogo");
+    }
+  };
+
+  const handleContacto = () => {
+    scrollToSection("contacto");
+  };
+
+  const handleToggleCatalog = () => {
+    if (isCannonPage) {
+      navigate("/");
+    } else {
+      navigate("/cannon");
+    }
+    setIsOpen(false);
+  };
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 backdrop-blur-md border-b ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 backdrop-blur-xl ${
         isScrolled
-          ? "bg-white/85 border-neutral-200"
-          : "bg-white/20 border-white/20"
+          ? "bg-white/90 text-black shadow-sm"
+          : "bg-transparent text-white"
       }`}
     >
       <div
-        className={`relative w-full px-6 md:px-12 flex items-center ${
+        className={`relative w-full px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
           isScrolled ? "h-16" : "h-20 md:h-24"
         }`}
       >
         {/* LOGO */}
-        <button
-          onClick={() => scrollToSection("top")}
-          className="absolute left-6 md:left-12"
-        >
+        <button onClick={handleInicio}>
           <img
-            src={logo}
-            alt="Maison Oud"
+            src={isScrolled ? logo : logo_white}
+            alt="Oud"
             className={`transition-all duration-500 ${
-              isScrolled ? "h-10" : "h-14 md:h-16"
+              isScrolled ? "h-12" : "h-16 md:h-18"
             }`}
           />
         </button>
 
-        {/* MENÚ CENTRADO */}
-        <nav className="hidden md:flex mx-auto items-center space-x-12 text-sm tracking-[0.2em]">
+        {/* DESKTOP MENU */}
+        <nav className="hidden md:flex items-center space-x-12 text-sm tracking-[0.3em] uppercase">
           <button
-            onClick={() => scrollToSection("top")}
-            className="hover:text-neutral-500 transition"
+            onClick={handleInicio}
+            className="hover:opacity-60 transition"
           >
-            INICIO
+            Inicio
           </button>
 
           <button
-            onClick={() => scrollToSection("catalogo")}
-            className="hover:text-neutral-500 transition"
+            onClick={handleCatalogo}
+            className="hover:opacity-60 transition"
           >
-            CATÁLOGO
+            Catálogo
           </button>
 
           <button
-            onClick={() => scrollToSection("contacto")}
-            className="hover:text-neutral-500 transition"
+            onClick={handleContacto}
+            className="hover:opacity-60 transition"
           >
-            CONTACTO
+            Contacto
           </button>
         </nav>
 
-        {/* MOBILE BUTTON */}
-        <button
-          className="md:hidden absolute right-6 flex flex-col space-y-1"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span className="w-6 h-[1px] bg-black"></span>
-          <span className="w-6 h-[1px] bg-black"></span>
-          <span className="w-6 h-[1px] bg-black"></span>
-        </button>
+        {/* RIGHT SIDE */}
+        <div className="flex items-center space-x-6">
+
+          {/* SMART CTA BUTTON */}
+          <button
+            onClick={handleToggleCatalog}
+            className={`hidden md:inline-block px-6 py-2 text-xs tracking-[0.3em] uppercase border transition-all duration-500 hover:scale-105 ${
+              isScrolled
+                ? "bg-black text-white border-black hover:bg-white hover:text-black"
+                : "bg-white/10 text-white border-white/40 hover:bg-white hover:text-black"
+            }`}
+          >
+            {isCannonPage ? "CATÁLOGO PERFUMES" : "PRODUCTOS CANNON"}
+          </button>
+
+          {/* MOBILE BURGER */}
+          <button
+            className="md:hidden flex flex-col space-y-1"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span
+              className={`w-6 h-[1px] transition-all duration-500 ${
+                isScrolled ? "bg-black" : "bg-white"
+              }`}
+            />
+            <span
+              className={`w-6 h-[1px] transition-all duration-500 ${
+                isScrolled ? "bg-black" : "bg-white"
+              }`}
+            />
+            <span
+              className={`w-6 h-[1px] transition-all duration-500 ${
+                isScrolled ? "bg-black" : "bg-white"
+              }`}
+            />
+          </button>
+        </div>
       </div>
 
       {/* MOBILE MENU */}
@@ -101,17 +153,30 @@ const Navbar: React.FC = () => {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-6 pb-8 pt-4 flex flex-col space-y-6 text-sm tracking-[0.2em] bg-white border-t border-neutral-200">
-          <button onClick={() => scrollToSection("top")}>
-            INICIO
+        <div
+          className={`px-6 pb-8 pt-4 flex flex-col space-y-6 text-md tracking-[0.3em] uppercase border-t ${
+            isScrolled
+              ? "bg-white text-black border-neutral-200"
+              : "bg-black text-white border-white/20"
+          }`}
+        >
+          <button onClick={handleInicio}>
+            Inicio
           </button>
 
-          <button onClick={() => scrollToSection("catalogo")}>
-            CATÁLOGO
+          <button onClick={handleCatalogo}>
+            Catálogo
           </button>
 
-          <button onClick={() => scrollToSection("contacto")}>
-            CONTACTO
+          <button onClick={handleContacto}>
+            Contacto
+          </button>
+
+          <button
+            onClick={handleToggleCatalog}
+            className="pt-4 border-t border-neutral-300"
+          >
+            {isCannonPage ? "CATÁLOGO PERFUMES" : "PRODUCTOS CANNON"}
           </button>
         </div>
       </div>

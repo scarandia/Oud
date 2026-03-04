@@ -11,7 +11,7 @@ const CannonProductCard: React.FC<CannonProductCardProps> = ({
   onClick,
 }) => {
   return (
-    <div
+    <div id="cannonProducts"
       onClick={() => onClick(product)}
       className="group cursor-pointer bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
       role="button"

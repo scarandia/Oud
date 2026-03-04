@@ -2,7 +2,7 @@ import React from "react";
 
 const CannonHero: React.FC = () => {
   return (
-    <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center text-center overflow-hidden">
+    <section id="cannonHero" className="relative h-[80vh] min-h-[600px] flex items-center justify-center text-center overflow-hidden">
 
       {/* Background Image */}
       <img

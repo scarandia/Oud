@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Music2 } from "lucide-react";
+import { Instagram, Facebook, Music2, Mail, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
   const phoneNumber = "59160346213";
@@ -74,6 +74,16 @@ const Footer: React.FC = () => {
               >
                 <Instagram size={20} strokeWidth={1.5} />
               </a>
+             
+              <a
+                href="https://wa.me/59160346213"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-black transition"
+                aria-label="WhatsApp"
+              >
+                <Phone size={20} strokeWidth={1.5} />
+              </a>
 
               <a
                 href="https://www.facebook.com/profile.php?id=61587070367393"
@@ -93,6 +103,16 @@ const Footer: React.FC = () => {
                 aria-label="TikTok"
               >
                 <Music2 size={20} strokeWidth={1.5} />
+              </a>
+              
+              <a
+                href="mailto:oudperfumeriabo@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-black transition"
+                aria-label="Gmail"
+              >
+                <Mail size={20} strokeWidth={1.5} />
               </a>
             </div>
           </div>

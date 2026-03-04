@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { CANNON_PRODUCTS } from "../data/CANNON_PRODUCTS";
 import type { HomeTextileProduct } from "../types/CannonProduct";
 import { X } from "lucide-react";
-import CannonProductCard from "../components/CannonProductCard";
+import CannonProductCard from "./CannonProductCard";
 import CannonHero from "../components/CannonHero";
 
 const CannonPage: React.FC = () => {

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import HeroSlider from "../components/HeroSlider";
 import ProductPage from "./ProductPage";
 import ProductToolbar from "../components/ProductToolbar";
-import ProductCard from "../components/ProductCard";
 import { PRODUCTS } from "../data/PERFUMES";
 import type { Product } from "../types/Product";
 import { WhatsAppButton } from "../components/WhatsAppButton";
-import ContactSection from "../components/ContactSection";
+import LuxuryHero from "../components/LuxuryHero";
+import Intro from "../components/Intro";
+import ProductGrid from "../components/ProductGrid";
 
 const Home: React.FC = () => {
   const [activeType, setActiveType] = useState<
@@ -46,24 +46,10 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-ivory text-charcoal">
       {/* HERO */}
-      <HeroSlider />
+      <LuxuryHero />
 
       {/* INTRO */}
-      <section className="py-24 px-6 text-center">
-        <p className="uppercase tracking-[0.4em] text-xs text-neutral-500 mb-6">
-          Colección Privada
-        </p>
-
-        <h1 className="font-serif text-4xl md:text-6xl font-light mb-8 leading-tight">
-          Fragancias que Definen tu Escencia{" "}
-        </h1>
-
-        <div className="w-16 h-[1px] bg-gold mx-auto mb-10"></div>
-
-        <p className="text-neutral-600 max-w-2xl mx-auto text-sm md:text-base">
-          Explora nuestra selección curada de fragancias.
-        </p>
-      </section>
+      <Intro />
 
       {/* TOOLBAR MULTI FILTRO */}
       <ProductToolbar
@@ -77,26 +63,10 @@ const Home: React.FC = () => {
       />
 
       {/* GRID */}
-      <section id="catalogo" className="max-w-7xl mx-auto px-6 md:px-8 py-20">
-        {filteredProducts.length === 0 ? (
-          <div className="py-24 text-center">
-            <p className="text-neutral-400 tracking-wide">
-              No se encontraron fragancias
-            </p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-16 gap-y-16 md:gap-y-28">
-            {filteredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="group transition-all duration-500 hover:-translate-y-2"
-              >
-                <ProductCard product={product} onClick={setSelectedProduct} />
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
+      <ProductGrid
+        products={filteredProducts}
+        onSelectProduct={setSelectedProduct}
+      />
 
       {/* MODAL */}
       {selectedProduct && (
@@ -106,7 +76,6 @@ const Home: React.FC = () => {
         />
       )}
       <WhatsAppButton />
-      <ContactSection />
     </div>
   );
 };
