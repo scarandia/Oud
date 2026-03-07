@@ -11,6 +11,7 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   const isCannonPage = location.pathname === "/cannon";
+  const isProductPage = location.pathname.startsWith("/product");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,20 +64,20 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 backdrop-blur-xl ${
-        isScrolled
+        isScrolled || isProductPage
           ? "bg-white/90 text-black shadow-sm"
           : "bg-transparent text-white"
       }`}
     >
       <div
         className={`relative w-full px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
-          isScrolled ? "h-16" : "h-20 md:h-24"
+          isScrolled || isProductPage ? "h-16" : "h-20 md:h-24"
         }`}
       >
         {/* LOGO */}
         <button onClick={handleInicio}>
           <img
-            src={isScrolled ? logo : logo_white}
+            src={isScrolled || isProductPage ? logo : logo_white}
             alt="Oud"
             className={`transition-all duration-500 ${
               isScrolled ? "h-12" : "h-16 md:h-18"
@@ -110,12 +111,11 @@ const Navbar: React.FC = () => {
 
         {/* RIGHT SIDE */}
         <div className="flex items-center space-x-6">
-
           {/* SMART CTA BUTTON */}
           <button
             onClick={handleToggleCatalog}
             className={`hidden md:inline-block px-6 py-2 text-xs tracking-[0.3em] uppercase border transition-all duration-500 hover:scale-105 ${
-              isScrolled
+              isScrolled || isProductPage
                 ? "bg-black text-white border-black hover:bg-white hover:text-black"
                 : "bg-white/10 text-white border-white/40 hover:bg-white hover:text-black"
             }`}
@@ -130,17 +130,17 @@ const Navbar: React.FC = () => {
           >
             <span
               className={`w-6 h-[1px] transition-all duration-500 ${
-                isScrolled ? "bg-black" : "bg-white"
+                isScrolled || isProductPage ? "bg-black" : "bg-white"
               }`}
             />
             <span
               className={`w-6 h-[1px] transition-all duration-500 ${
-                isScrolled ? "bg-black" : "bg-white"
+                isScrolled || isProductPage ? "bg-black" : "bg-white"
               }`}
             />
             <span
               className={`w-6 h-[1px] transition-all duration-500 ${
-                isScrolled ? "bg-black" : "bg-white"
+                isScrolled || isProductPage ? "bg-black" : "bg-white"
               }`}
             />
           </button>
@@ -160,17 +160,11 @@ const Navbar: React.FC = () => {
               : "bg-black text-white border-white/20"
           }`}
         >
-          <button onClick={handleInicio}>
-            Inicio
-          </button>
+          <button onClick={handleInicio}>Inicio</button>
 
-          <button onClick={handleCatalogo}>
-            Catálogo
-          </button>
+          <button onClick={handleCatalogo}>Catálogo</button>
 
-          <button onClick={handleContacto}>
-            Contacto
-          </button>
+          <button onClick={handleContacto}>Contacto</button>
 
           <button
             onClick={handleToggleCatalog}

@@ -1,24 +1,17 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import type { ProductCardProps } from "../types/ProductCardProps";
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+
   const handleClick = () => {
-    if (onClick) {
-      onClick(product);
-    }
+    sessionStorage.setItem("catalogScroll", String(window.scrollY));
   };
 
   return (
-    <div
+    <Link
+      to={`/product/${product.id}`}
       onClick={handleClick}
-      className="group cursor-pointer bg-white"
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e: React.KeyboardEvent) => {
-        if ((e.key === "Enter" || e.key === " ") && onClick) {
-          onClick(product);
-        }
-      }}
+      className="group cursor-pointer bg-white block"
     >
       <div className="relative overflow-hidden aspect-[3/4] bg-neutral-100 rounded-xl shadow-sm">
         <img
@@ -44,7 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
           Bs. {product.sizes[0].prices[0]}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

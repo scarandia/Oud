@@ -3,7 +3,7 @@ import type { HomeTextileProduct } from "../types/CannonProduct";
 export const CANNON_PRODUCTS: HomeTextileProduct[] = [
   {
     id: 1,
-    image: "/test/sheets.png",
+    images: ["/test/sheets.png"],
     brand: "Cannon",
     category: "sabanas",
     collection: "Colección Verano 2025",
@@ -22,7 +22,7 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
   },
   {
     id: 2,
-    image: "/test/sheets.png",
+    images: ["/test/sheets.png"],
     brand: "Cannon",
     category: "sabanas",
     collection: "Colección Verano 2025",
@@ -41,7 +41,7 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
   },
   {
     id: 3,
-    image: "/test/sheets.png",
+    images: ["/test/sheets.png"],
     brand: "Cannon",
     category: "sabanas",
     collection: "Colección Verano 2025",
@@ -60,7 +60,7 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
   },
   {
     id: 4,
-    image: "/test/sheets.png",
+    images: ["/test/sheets.png"],
     brand: "Cannon",
     category: "sabanas",
     collection: "Colección Verano 2025",
@@ -79,7 +79,7 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
   },
   {
     id: 5,
-    image: "/test/sheets.png",
+    images: ["/test/sheets.png"],
     brand: "Cannon",
     category: "sabanas",
     collection: "Colección Verano 2025",
@@ -98,7 +98,7 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
   },
   {
     id: 6,
-    image: "/test/sheets.png",
+    images: ["/test/sheets.png"],
     brand: "Cannon",
     category: "sabanas",
     collection: "Colección Verano 2025",
@@ -117,7 +117,7 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
   },
   {
     id: 7,
-    image: "/test/sheets.png",
+    images: ["/test/sheets.png"],
     brand: "Cannon",
     category: "sabanas",
     collection: "Colección Verano 2025",
@@ -136,7 +136,7 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
   },
   {
     id: 8,
-    image: "/test/sheets.png",
+    images: ["/test/sheets.png"],
     brand: "Cannon",
     category: "sabanas",
     collection: "Colección Verano 2025",
@@ -154,8 +154,8 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
     ],
   },
   {
-  id: 17,
-    image: "/test/sheets.png",
+    id: 17,
+    images: ["/test/sheets.png"],
     brand: "Cannon",
     category: "sabanas",
     collection: "American Family Verano 2026",
@@ -173,7 +173,7 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
   },
   {
     id: 9,
-    image: "/test/plumon.jpg",
+    images: ["/test/plumon.jpg"],
     brand: "Cannon",
     category: "plumones",
     collection: "Colección Verano 2026",
@@ -190,8 +190,8 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
     ],
   },
   {
-  id: 10,
-    image: "/test/plumon.jpg",
+    id: 10,
+    images: ["/test/plumon.jpg"],
     brand: "Cannon",
     category: "plumones",
     collection: "Colección Verano 2026",
@@ -208,8 +208,8 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
     ],
   },
   {
-  id: 11,
-    image: "/test/plumon.jpg",
+    id: 11,
+    images: ["/test/plumon.jpg"],
     brand: "Cannon",
     category: "plumones",
     collection: "Colección Verano 2026",
@@ -226,8 +226,8 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
     ],
   },
   {
-  id: 12,
-    image: "/test/plumon.jpg",
+    id: 12,
+    images: ["/test/plumon.jpg"],
     brand: "Cannon",
     category: "plumones",
     collection: "Colección Verano 2026",
@@ -244,8 +244,8 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
     ],
   },
   {
-  id: 13,
-    image: "/test/plumon.jpg",
+    id: 13,
+    images: ["/test/plumon.jpg"],
     brand: "Cannon",
     category: "plumones",
     collection: "Colección Verano 2026",
@@ -262,8 +262,8 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
     ],
   },
   {
-  id: 14,
-    image: "/test/plumon.jpg",
+    id: 14,
+    images: ["/test/plumon.jpg"],
     brand: "Cannon",
     category: "plumones",
     collection: "Colección Verano 2026",
@@ -280,8 +280,8 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
     ],
   },
   {
-  id: 15,
-    image: "/test/plumon.jpg",
+    id: 15,
+    images: ["/test/plumon.jpg"],
     brand: "Cannon",
     category: "plumones",
     collection: "Colección Verano 2026",
@@ -298,8 +298,8 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
     ],
   },
   {
-  id: 16,
-    image: "/test/plumon.jpg",
+    id: 16,
+    images: ["/test/plumon.jpg"],
     brand: "Cannon",
     category: "plumones",
     collection: "Colección Verano 2026",
@@ -315,5 +315,4 @@ export const CANNON_PRODUCTS: HomeTextileProduct[] = [
       "Textiles fáciles de cuidar",
     ],
   },
-  
 ];

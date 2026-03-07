@@ -12,6 +12,8 @@ export const PRODUCTS: Product[] = [
     gender: "Unisex",
     notes: [],
     image: "/images_perfumes/mancera_instant_crush.png",
+    description:
+      "Notas de azafrán luminoso, ámbar cálido y vainilla cremosa crean un aroma intenso, elegante y adictivo.",
   },
 
   {
@@ -25,6 +27,8 @@ export const PRODUCTS: Product[] = [
     gender: "Unisex",
     notes: ["Cítricos", "Lavanda", "Miel", "Ámbar"],
     image: "/images_perfumes/xerjoff_naxos.png",
+    description:
+      "Un aroma a cítricos y lavanda con miel, especias y ámbar crean un aroma intenso, elegante y opulento.",
   },
 
   {
@@ -38,6 +42,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Piña", "Bergamota", "Abedul", "Ámbar gris"],
     image: "/images_perfumes/aventus_creed.png",
+    description:
+      "Fragancia icónica con piña fresca, bergamota, abedul ahumado y ámbar gris, poderosa y elegante.",
   },
 
   {
@@ -51,6 +57,8 @@ export const PRODUCTS: Product[] = [
     gender: "Unisex",
     notes: ["Cítricos", "Notas marinas", "Almizcle"],
     image: "/images_perfumes/millesime_imperial_creed.png",
+    description:
+      "Aroma fresco y elegante con cítricos luminosos, notas marinas saladas y un fondo almizclado sofisticado.",
   },
 
   {
@@ -64,6 +72,8 @@ export const PRODUCTS: Product[] = [
     gender: "Unisex",
     notes: ["Cacao", "Vainilla", "Maderas"],
     image: "/images_perfumes/bond_no_9.png",
+    description:
+      "Fragancia dulce y moderna con cacao cremoso, vainilla y maderas suaves, cálida y adictiva.",
   },
 
   {
@@ -77,6 +87,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Cardamomo", "Neroli", "Cuero"],
     image: "/images_perfumes/the_most_wanted_intense.png",
+    description:
+      "Fragancia calida y seductora, especiado con cardamomo, neroli y cuero elegante.",
   },
 
   {
@@ -90,6 +102,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Vainilla bourbon", "Maderas"],
     image: "/images_perfumes/the_most_wanted_parfum.png",
+    description:
+      "Poder y seducción en estado puro, con vainilla bourbon y maderas profundas.",
   },
 
   {
@@ -103,6 +117,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Pino", "Incienso", "Resinas"],
     image: "/images_perfumes/burberry_hero_parfum.png",
+    description:
+      "Fragancia elegante amaderada moderna con pino, incienso y resinas profundas.",
   },
 
   {
@@ -116,6 +132,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Ron", "Ámbar", "Cuero"],
     image: "/images_perfumes/bvlgari_man_in_black.png",
+    description:
+      "Un aroma oscuro y magnético con ron, ámbar, especias calientes y cuero",
   },
 
   {
@@ -129,6 +147,8 @@ export const PRODUCTS: Product[] = [
     gender: "Mujer",
     notes: ["Piña", "Bergamota"],
     image: "/images_perfumes/carolina_herrera_212_sexy.png",
+    description:
+      "Elegancia moderna con piña fresca, bergamota vibrante y un fondo masculino inolvidable.",
   },
 
   {
@@ -142,6 +162,8 @@ export const PRODUCTS: Product[] = [
     gender: "Mujer",
     notes: ["Jazmín", "Vainilla", "Cacao", "Tonka"],
     image: "/images_perfumes/carolina_herrera_good_girl.png",
+    description:
+      "Fragancia con notas de jazmín, vainilla, cacao y tonka que se combinan en un aroma femenino, seductor y sofisticado.",
   },
 
   {
@@ -155,6 +177,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Limón", "Vetiver"],
     image: "/images_perfumes/calvin_klein_ck_in2u_for_him.png",
+    description:
+      "Fragancia fresca y citrica con limón, cacao y vetiver moderno.",
   },
 
   {
@@ -168,6 +192,8 @@ export const PRODUCTS: Product[] = [
     gender: "Mujer",
     notes: ["Toronja", "Vainilla", "Orquídea"],
     image: "/images_perfumes/calvin_klein_ck_in2u_for_her.png",
+    description:
+      "Aroma juvenil y fresca, con toronja rosada y un toque dulce de vainilla y orquídea",
   },
 
   {
@@ -181,6 +207,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Limón", "Bergamota", "Ámbar"],
     image: "/images_perfumes/dolce_gabbana_devotion_pour_homme.png",
+    description:
+      "Aroma a cítricos luminosos como limón y bergamota abren paso a especias suaves y un fondo cálido ambarado.",
   },
 
   {
@@ -194,6 +222,8 @@ export const PRODUCTS: Product[] = [
     gender: "Mujer",
     notes: ["Ámbar", "Vainilla"],
     image: "/images_perfumes/dolce_gabbana_devotion_intense.png",
+    description:
+      "Notas dulces y especiadas se funden conámbar profundo y vainilla cremosa, creando un aroma intenso y elegante.",
   },
   {
     id: 16,
@@ -206,6 +236,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Maderas nobles", "Especias cálidas", "Ámbar"],
     image: "/images_perfumes/k_by_dolce_gabbana_parfum.png",
+    description:
+      "Una fragancia de maderas nobles, especias cálidas y un toque ambarado crean un aroma intenso y dominante.",
   },
 
   {
@@ -219,6 +251,8 @@ export const PRODUCTS: Product[] = [
     gender: "Mujer",
     notes: ["Cereza", "Vainilla", "Ámbar"],
     image: "/images_perfumes/dolce_gabbana_q_intense.png",
+    description:
+      "Aroma de cereza jugosa, vainilla dulce y ámbar se combinan para un aroma intenso y sofisticado.",
   },
 
   {
@@ -232,6 +266,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Cardamomo", "Neroli", "Cuero", "Ámbar"],
     image: "/images_perfumes/dolce_gabbana_the_one_for_men_intense.png",
+    description:
+      "Un aroma a cardamomo especiado y neroli fresco que se mezclan con cuero suave y ámbar cálido.",
   },
 
   {
@@ -245,6 +281,8 @@ export const PRODUCTS: Product[] = [
     gender: "Mujer",
     notes: ["Pera", "Iris", "Vainilla", "Praliné"],
     image: "/images_perfumes/lancome_la_vie_est_belle.png",
+    description:
+      "Un aroma dulce, elegante y adictivo donde la pera y la grosella se mezclan con iris, vainilla y praliné cremoso.",
   },
 
   {
@@ -258,12 +296,14 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Manzana", "Canela", "Maderas"],
     image: "/images_perfumes/hugo_boss_boss_bottled_travel_edition.png",
+    description:
+      "Un aroma de manzana fresca y cítricos mezclados con canela especiada y un fondo de maderas suaves.",
   },
 
   {
     id: 21,
     brand: "Hugo Boss",
-    name: "Boss Bottled Beyond Set 3x1",
+    name: "Boss Bottled Beyond Set 3 PCS",
     type: "designer",
     category: "woody",
     concentration: "Eau de Parfum",
@@ -271,6 +311,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Frutales", "Especias", "Maderas"],
     image: "/images_perfumes/hugo_boss_boss_bottled_beyond.png",
+    description:
+      "Notas frutales vibrantes, especias modernas y maderas intensas crean un aroma elegante y actual.",
   },
   {
     id: 22,
@@ -282,9 +324,9 @@ export const PRODUCTS: Product[] = [
     sizes: [{ size_ml: 80, prices: [870] }],
     gender: "Mujer",
     notes: ["Vainilla", "Ciruela", "Maderas cálidas"],
+    image: "/images_perfumes/hugo_boss_alive.png",
     description:
       "Aromas de vainilla intensa, ciruela jugosa y maderas cálidas que forman un perfume femenino y envolvente.",
-    image: "/images_perfumes/hugo_boss_alive.png",
   },
   {
     id: 23,
@@ -297,6 +339,8 @@ export const PRODUCTS: Product[] = [
     gender: "Mujer",
     notes: ["Cereza", "Frambuesa", "Vainilla"],
     image: "/images_perfumes/giorgio_armani_in_love_with_you.png",
+    description:
+      "Notas de frutos rojos como cereza y frambuesa que se funden con flores suaves y un fondo cremoso de vainilla.",
   },
 
   {
@@ -352,6 +396,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Notas marinas", "Cítricos", "Vetiver"],
     image: "/images_perfumes/prada_luna_rossa_ocean.png",
+    description:
+      "Fragancia refrescante y sofisticada, combina notas marinas, cítricas y vetiver en un aroma moderno y elegante.",
   },
 
   {
@@ -365,6 +411,8 @@ export const PRODUCTS: Product[] = [
     gender: "Mujer",
     notes: ["Almendra", "Flores blancas"],
     image: "/images_perfumes/marc_jacobs_perfect.png",
+    description:
+      "Una fragancia almendrada cremosa con flores blancas y un fondo suave crean un aroma delicado y moderno.",
   },
   {
     id: 29,
@@ -392,6 +440,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Vainilla", "Lavanda"],
     image: "/images_perfumes/paco_rabanne_phantom_intense.png",
+    description:
+      "Aroma moderno y adictivo con vainilla cremosa, lavanda y notas amaderadas.",
   },
   {
     id: 31,
@@ -418,6 +468,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Cítricos", "Maderas"],
     image: "/images_perfumes/tommy_hilfiger_tommy.png",
+    description:
+      "Fragancia clásica, limpia y atemporal, con cítricos frescos y maderas suaves para un estilo casual y elegante.",
   },
   {
     id: 33,
@@ -444,6 +496,8 @@ export const PRODUCTS: Product[] = [
     gender: "Mujer",
     notes: ["Coco", "Vainilla", "Pera"],
     image: "/images_perfumes/ariana_grande_cloud.png",
+    description:
+      "Una mezcla cremosa de coco, vainilla y pera jugosa, suavizada con almizcle y notas lactónicas adictivas.",
   },
   {
     id: 35,
@@ -456,6 +510,8 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Cítricos", "Menta"],
     image: "/images_perfumes/afnan_9am_dive.png",
+    description:
+      "Una mezcla cremosa de coco, vainilla y pera jugosa, suavizada con almizcle y notas lactónicas adictivas.",
   },
   {
     id: 36,
@@ -468,9 +524,46 @@ export const PRODUCTS: Product[] = [
     gender: "Hombre",
     notes: ["Vainilla", "Manzana"],
     image: "/images_perfumes/afnan_9pm_dive.png",
+    description:
+      "Fragancia dulce y seductora con vainilla, manzana y canela, ideal para la noche.",
   },
   {
     id: 37,
+    brand: "Ahmed Al Maghribi",
+    name: "Kaaf",
+    type: "arabic",
+    category: "fresh",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 100, prices: [460] }],
+    gender: "Hombre",
+    notes: [
+      "bergamota",
+      "limón",
+      "lavanda",
+      "notas marinas",
+      "almizcle",
+      "maderas",
+    ],
+    image: "/images_perfumes/kaaf.png",
+    description:
+      "Fragancia dulce y seductora con vainilla, manzana y canela, ideal para la noche.",
+  },
+  {
+    id: 38,
+    brand: "Ahmed Al Maghribi",
+    name: "Peachy Peach",
+    type: "arabic",
+    category: "sweet",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 100, prices: [460] }],
+    gender: "Unisex",
+    notes: ["durazno", "vainilla", "caramelo", "almizcle"],
+    image: "/images_perfumes/Peachy_Peach.png",
+    description:
+      "Durazno jugoso y dulce envuelto en vainilla cremosa para un aroma adictivo.",
+  },
+  {
+    id: 39,
     brand: "Lattafa",
     name: "Asad",
     type: "arabic",
@@ -478,32 +571,217 @@ export const PRODUCTS: Product[] = [
     concentration: "Eau de Parfum",
     sizes: [{ size_ml: 100, prices: [400] }],
     gender: "Hombre",
-    notes: ["Vainilla", "Ámbar"],
+    notes: ["Vainilla", "Ámbar", "Pimienta negra"],
     image: "/images_perfumes/lattafa_asad.png",
+    description:
+      "Fragancia oriental intensa con vainilla, pimienta negra y ámbar especiado.",
   },
-
   {
-    id: 38,
+    id: 40,
+    brand: "Lattafa",
+    name: "Asad Bourbon",
+    type: "arabic",
+    category: "oriental",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 100, prices: [400] }],
+    gender: "Hombre",
+    notes: ["Vainilla bourbon", "Ámbar", "Maderas"],
+    image: "/images_perfumes/lattafa_asad_bourbon.png",
+    description:
+      "Aroma cálido y profundo, con vainilla bourbon y maderas intensas.",
+  },
+  {
+    id: 41,
+    brand: "Lattafa",
+    name: "Badee Al Oud Blush",
+    type: "arabic",
+    category: "floral",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 100, prices: [450] }],
+    gender: "Mujer",
+    notes: ["rosa", "vainilla", "maderas suaves", "almizcle"],
+    image: "/images_perfumes/badee_al_oud_blush.png",
+    description:
+      "Fragancia floral-oriental con rosas, vainilla y maderas suaves.",
+  },
+  {
+    id: 42,
+    brand: "Lattafa",
+    name: "Badee Al Oud Honor and Glory",
+    type: "arabic",
+    category: "oriental",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 100, prices: [450] }],
+    gender: "Unisex",
+    notes: ["oud", "ámbar", "vainilla", "notas dulces"],
+    image: "/images_perfumes/lattafa_badee_al_oud_honor_glory.png",
+    description:
+      "Fragancia unisex con oud potente acompañado de toques dulces y ambarados que imponen presencia.",
+  },
+  {
+    id: 43,
+    brand: "Lattafa",
+    name: "Mayar",
+    type: "arabic",
+    category: "floral",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 100, prices: [450] }],
+    gender: "Mujer",
+    notes: ["frutas delicadas", "flores suaves", "vainilla"],
+    image: "/images_perfumes/lattafa_mayar.png",
+    description:
+      "Elegancia femenina con frutas delicadas, flores suaves y vainilla sedosa.",
+  },
+  {
+    id: 44,
+    brand: "Lattafa",
+    name: "Mayar Cherry Intense",
+    type: "arabic",
+    category: "sweet",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 100, prices: [500] }],
+    gender: "Mujer",
+    notes: ["cereza", "vainilla", "notas dulces"],
+    image: "/images_perfumes/lattafa_mayar_cherry_intense.png",
+    description: "Cereza intensa y sensual con un fondo dulce y envolvente.",
+  },
+  {
+    id: 45,
+    brand: "Lattafa",
+    name: "Yara",
+    type: "arabic",
+    category: "sweet",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 100, prices: [400] }],
+    gender: "Mujer",
+    notes: ["coco", "vainilla", "almizcle", "notas dulces"],
+    image: "/images_perfumes/lattafa_yara.png",
+    description:
+      "Dulce, femenina y encantadora con coco cremoso y vainilla suave.",
+  },
+  {
+    id: 46,
+    brand: "Lattafa",
+    name: "Eclaire",
+    type: "arabic",
+    category: "gourmand",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 100, prices: [470] }],
+    gender: "Mujer",
+    notes: ["caramelo", "leche", "vainilla", "azúcar"],
+    image: "/images_perfumes/lattafa_eclaire.png",
+    description:
+      "Un postre elegante en perfume: caramelo, leche y vainilla irresistible.",
+  },
+  {
+    id: 47,
+    brand: "Paris Corner",
+    name: "Choco Overdose",
+    type: "arabic",
+    category: "gourmand",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 75, prices: [550] }],
+    gender: "Mujer",
+    notes: ["chocolate", "cacao", "vainilla", "azúcar"],
+    image: "/images_perfumes/lattafa_give_me_gourmand_choco_overdose.png",
+    description:
+      "Perfume ultra dulce con chocolate cremoso, cacao y vainilla intensa.",
+  },
+  {
+    id: 48,
+    brand: "Paris Corner",
+    name: "Berry On Top",
+    type: "arabic",
+    category: "sweet",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 75, prices: [550] }],
+    gender: "Mujer",
+    notes: ["frutos rojos", "azúcar", "vainilla"],
+    image: "/images_perfumes/lattafa_give_me_gourmand_berry_on_top.png",
+    description: "Aroma dulce y divertido con frutos rojos, azúcar y vainilla.",
+  },
+  {
+    id: 49,
+    brand: "Paris Corner",
+    name: "Cookie Crave",
+    type: "arabic",
+    category: "gourmand",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 75, prices: [550] }],
+    gender: "Mujer",
+    notes: ["galleta", "azúcar", "vainilla", "mantequilla"],
+    image: "/images_perfumes/lattafa_give_me_gourmand_cookie_crave.png",
+    description:
+      "Fragancia gourmand con galleta recién horneada, azúcar y vainilla.",
+  },
+  {
+    id: 50,
+    brand: "Paris Corner",
+    name: "Whipped Pleasure",
+    type: "arabic",
+    category: "gourmand",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 75, prices: [550] }],
+    gender: "Mujer",
+    notes: ["nata montada", "vainilla", "azúcar"],
+    image: "/images_perfumes/lattafa_give_me_gourmand_whipped_pleasure.png",
+    description:
+      "Fragancia cremosa y golosa con nata montada, vainilla y azúcar.",
+  },
+  {
+    id: 51,
+    brand: "Paris Corner",
+    name: "Mallow Madness",
+    type: "arabic",
+    category: "sweet",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 75, prices: [550] }],
+    gender: "Mujer",
+    notes: ["malvavisco", "vainilla", "notas empolvadas"],
+    image: "/images_perfumes/lattafa_give_me_gourmand_mallow_madness.png",
+    description:
+      "Aroma suave y dulce con malvavisco, vainilla y notas empolvadas.",
+  },
+  {
+    id: 52,
+    brand: "Paris Corner",
+    name: "Vanilla Freak",
+    type: "arabic",
+    category: "gourmand",
+    concentration: "Eau de Parfum",
+    sizes: [{ size_ml: 75, prices: [550] }],
+    gender: "Mujer",
+    notes: ["vainilla", "azúcar", "crema", "almizcle dulce"],
+    image: "/images_perfumes/lattafa_give_me_gourmand_vanilla_freak.png",
+    description:
+      "Perfume intensamente avainillado con azúcar, crema y almizcle dulce.",
+  },
+  {
+    id: 53,
     brand: "Lattafa",
     name: "Khamrah Qahwa",
     type: "arabic",
     category: "gourmand",
     concentration: "Eau de Parfum",
-    sizes: [{ size_ml: 100, prices: [540] }],
+    sizes: [{ size_ml: 100, prices: [450] }],
     gender: "Unisex",
     notes: ["Café", "Vainilla"],
     image: "/images_perfumes/lattafa_khamrah_qahwa.png",
+    description:
+      "Fragancia unisex, con un aroma a café especiado y vainilla intensa para un aroma oriental poderoso.",
   },
   {
-    id: 39,
+    id: 54,
     brand: "Al Haramain",
     name: "L'Aventure Men",
     type: "arabic",
     category: "fresh",
     concentration: "Eau de Parfum",
-    sizes: [{ size_ml: 100, prices: [450] }],
+    sizes: [{ size_ml: 100, prices: [540] }],
     gender: "Hombre",
     notes: ["Piña", "Bergamota"],
     image: "/images_perfumes/l_aventure.png",
+    description:
+      "Elegancia moderna con piña fresca, bergamota vibrante y un fondo masculino inolvidable.",
   },
 ];

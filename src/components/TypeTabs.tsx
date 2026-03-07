@@ -1,6 +1,3 @@
-// components/TypeTabs.tsx
-import React from "react";
-
 interface Props {
   active: "designer" | "arabic" | "nicho";
   setActive: (type: "designer" | "arabic" | "nicho") => void;

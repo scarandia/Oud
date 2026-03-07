@@ -1,5 +1,3 @@
-import React from "react";
-
 const CannonHero: React.FC = () => {
   return (
     <section id="cannonHero" className="relative h-[80vh] min-h-[600px] flex items-center justify-center text-center overflow-hidden">

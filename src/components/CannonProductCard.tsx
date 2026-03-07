@@ -1,4 +1,3 @@
-import React from "react";
 import type { HomeTextileProduct } from "../types/CannonProduct";
 
 interface CannonProductCardProps {

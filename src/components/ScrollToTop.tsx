@@ -5,6 +5,20 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    if (pathname === "/") {
+      const savedScroll = sessionStorage.getItem("catalogScroll");
+
+      if (savedScroll) {
+        window.scrollTo({
+          top: Number(savedScroll),
+          behavior: "auto",
+        });
+
+        sessionStorage.removeItem("catalogScroll");
+        return;
+      }
+    }
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",

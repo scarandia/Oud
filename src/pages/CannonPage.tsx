@@ -2,14 +2,15 @@ import { useState, useEffect } from "react";
 import { CANNON_PRODUCTS } from "../data/CANNON_PRODUCTS";
 import type { HomeTextileProduct } from "../types/CannonProduct";
 import { X } from "lucide-react";
-import CannonProductCard from "./CannonProductCard";
+import CannonProductCard from "../components/CannonProductCard";
 import CannonHero from "../components/CannonHero";
+import { useNavigate } from "react-router-dom";
 
 const CannonPage: React.FC = () => {
   const [selectedProduct, setSelectedProduct] =
     useState<HomeTextileProduct | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
-
+  const navigate = useNavigate();
   // Lock scroll when modal open
   useEffect(() => {
     if (selectedProduct) {
@@ -55,7 +56,7 @@ const CannonPage: React.FC = () => {
             <CannonProductCard
               key={product.id}
               product={product}
-              onClick={setSelectedProduct}
+              onClick={(p) => navigate(`/cannon/${p.id}`)}
             />
           ))}
         </div>

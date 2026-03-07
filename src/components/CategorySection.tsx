@@ -1,4 +1,3 @@
-import React from "react";
 import ProductCard from "./ProductCard";
 import type { Product } from "../types/Product";
 
@@ -39,7 +38,6 @@ const CategorySection: React.FC<Props> = ({
 
   return (
     <section className="w-full mb-36">
-      
       {/* HEADER FULL WIDTH */}
       <div className={`w-full py-28 md:py-16 text-center ${current.wrapper}`}>
         <p className="uppercase tracking-[0.5em] text-xs opacity-70 mb-6">

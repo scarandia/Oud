@@ -13,5 +13,5 @@ export interface HomeTextileProduct {
   model: string
   specs: TextileSpecs
   features: string[]
-  image?: string
+  images: string[]
 }

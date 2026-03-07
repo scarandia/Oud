@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import ProductPage from "./ProductPage";
 import ProductToolbar from "../components/ProductToolbar";
 import { PRODUCTS } from "../data/PERFUMES";
-import type { Product } from "../types/Product";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import LuxuryHero from "../components/LuxuryHero";
 import Intro from "../components/Intro";
@@ -16,7 +14,6 @@ const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedBrands, setSelectedBrands] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const clearFilters = () => {
     setActiveType("all");
@@ -51,7 +48,7 @@ const Home: React.FC = () => {
       {/* INTRO */}
       <Intro />
 
-      {/* TOOLBAR MULTI FILTRO */}
+      {/* TOOLBAR */}
       <ProductToolbar
         activeType={activeType}
         setActiveType={setActiveType}
@@ -63,18 +60,8 @@ const Home: React.FC = () => {
       />
 
       {/* GRID */}
-      <ProductGrid
-        products={filteredProducts}
-        onSelectProduct={setSelectedProduct}
-      />
+      <ProductGrid products={filteredProducts} />
 
-      {/* MODAL */}
-      {selectedProduct && (
-        <ProductPage
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
-      )}
       <WhatsAppButton />
     </div>
   );
