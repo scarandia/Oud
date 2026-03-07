@@ -24,7 +24,7 @@ const CannonProductCard: React.FC<CannonProductCardProps> = ({
       {/* IMAGE */}
       <div className="relative aspect-[4/5] overflow-hidden bg-neutral-100">
         <img
-          src={product.image}
+          src={product.images[0]}
           alt={product.model}
           className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-95"
         />
